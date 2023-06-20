@@ -16,14 +16,13 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <div className="flex  w-auto  items-center justify-center gap-2 rounded border-2 border-gray-200 p-2">
+    <button
+      className="flex  w-auto items-center  justify-center gap-2 rounded  border-2  border-gray-200 bg-white p-2 capitalize dark:bg-inherit"
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    >
       <ThemeIcon width={20} height={20} theme={theme} />
-      <button
-        className="capitalize"
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      >
-        {theme}
-      </button>
-    </div>
+
+      {theme}
+    </button>
   )
 }
